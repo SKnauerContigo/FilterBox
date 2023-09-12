@@ -1,8 +1,8 @@
 {
-	"name": "Widget_FilterBox",
+	"name": "Widget_FilterBox_Sven",
 	"imports": ["planning-model"],
-	"description": "Widget FilterBox",
-	"newInstancePrefix": "Widget_FilterBox",
+	"description": "Widget FilterBox_Sven",
+	"newInstancePrefix": "Widget_FilterBox_Sven",
 	"eula": "",
 	"vendor": "",
 	"license": "",
