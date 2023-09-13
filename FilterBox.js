@@ -31,6 +31,8 @@
         const filterButton = shadowRoot.getElementById('filter_button');
         const searchBar = shadowRoot.getElementById('search');
         const memberList = shadowRoot.getElementById('select_box_filter');
+        var ids = [];
+        var desc = [];
 
         searchBar.addEventListener('keyup', function(e) {
           var searchterm = searchBar.value;
@@ -71,8 +73,7 @@
               });
             // var members = ArrayUtils.create(Type.MemberInfo);
             // var value = InputField_1.getValue();
-            var ids = [];
-            var desc = [];
+            
             var temp = '';
             var members;
 
