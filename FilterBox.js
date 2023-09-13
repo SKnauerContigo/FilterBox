@@ -25,7 +25,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border: 4px solid #3498db;
+      border: 4px solid white;
       border-top: 4px solid transparent;
       border-radius: 50%;
       width: 40px;
