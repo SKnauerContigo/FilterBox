@@ -45,7 +45,7 @@
             }
             for (var k = 0; k < desc.length; k++) {
               if (desc[k].includes(searchterm)) {
-                console("found member");
+                console.log("found member");
                 opt.value = opt.text = desc[k];
                 memberList.appendChild(opt);
               }
