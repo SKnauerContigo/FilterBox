@@ -6,8 +6,10 @@
     <button id="filter_button">Filter</button>
     <div class="child" >
     <label for="select_box_filter">Filter:</label>
-          <select id="select_box_filter">
-          </select>
+          <input type="text" name="searchterm" list="select_box_filter">
+          <datalist id="select_box_filter">
+          </datalist>
+          
     <button id="close_button">Close</button>
     </div>
 
