@@ -15,7 +15,6 @@
         background: rgba(0, 0, 0, 0.5);
         display: none;
         z-index: 9999;
-        display: flex;
         allign-items: center;
         justify-content: center;
       }
