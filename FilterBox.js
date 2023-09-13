@@ -2,8 +2,31 @@
     // Define the HTML template for your custom element
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
+
+    <style>
+
+      .loading_overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 9999;
+      }
+
+      .loading_spinner {
+        position: absolute
+        top: 50%;
+        left: 50%
+        transform: translate(-50%, -50%);
+      }
+
+    </style>
  
     <button id="filter_button">Filter</button>
+
     <div class="child" >
     <label for="select_box_filter">Filter:</label>
           <input id="search" type="text" name="search" list="select_box_filter"/>
@@ -12,6 +35,10 @@
     <button id="close_button">Close</button>
     </div>
 
+    <div id="loading_overlay">
+      <div id="loading_spinner">Loading...</div>
+    </div>
+^
 
     `;
   
@@ -55,6 +82,7 @@
           }
 
         });
+        
 
         // Add a click event listener to the "filter_button"
         filterButton.addEventListener('click', async () => {
