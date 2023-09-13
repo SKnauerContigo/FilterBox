@@ -8,7 +8,6 @@
     <label for="select_box_filter">Filter:</label>
           <input id='search' type="text" name="search" list="select_box_filter/>
           <select id="select_box_filter">
-            <option></option>
           </select>
           
     <button id="close_button">Close</button>
@@ -39,9 +38,9 @@
           var searchterm = searchBar.value;
           console.log(searchterm)
 
-          if (memberList !== null) {
-            while (memberList.firstChild) {
-              memberList.removeChild(memberList.lastChild);
+          if (searchBar.hasChildNodes) {
+            while (searchBar.firstChild) {
+              searchBar.removeChild(searchBar.lastChild);
             }
           }
           if (searchterm.length >= 3) {
@@ -51,7 +50,7 @@
               if (desc[k].includes(searchterm)) {
                 console.log("found member");
                 opt.value = opt.text = desc[k];
-                memberList.appendChild(opt);
+                searchBar.appendChild(opt);
               }
             }
           }
