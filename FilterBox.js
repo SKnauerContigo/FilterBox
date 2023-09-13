@@ -23,6 +23,14 @@
         transform: translate(-50%, -50%);
       }
 
+      #loading_text {
+        text-align: center;
+        margin-top: 1em;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
     </style>
  
     <button id="filter_button">Filter</button>
@@ -36,7 +44,9 @@
     </div>
 
     <div id="loading_overlay">
-      <div id="loading_spinner">Loading...</div>
+      <div id="loading_spinner">
+        <div id="loading_text">Loading...</div>
+      </div>
     </div>
 
 
