@@ -17,11 +17,15 @@
         z-index: 9999;
       }
 
-      #loading_spinner {
+      #loading_spinner_container {
         position: absolute
         top: 50%;
         left: 50%
         transform: translate(-50%, -50%);
+      }
+
+      #loading_spinner {
+       
         border: 4px solid #f3f3f3;
         border-top: 4px
         border-radius: 50%;
@@ -50,7 +54,8 @@
     </div>
 
     <div id="loading_overlay">
-      <div class="loader" id="loading_spinner">
+      <div id="loading_spinner_container">
+        <div id="loading_spinner"></div>
       </div>
     </div>
 
