@@ -37,11 +37,10 @@
           var searchterm = searchBar.value;
           console.log(searchterm)
 
-          if (searchBar.hasChildNodes) {
-            while (searchBar.firstChild) {
-              searchBar.removeChild(searchBar.lastChild);
+            while (memberList.firstChild) {
+              memberList.removeChild(memberList.lastChild);
             }
-          }
+          
           if (searchterm.length >= 3) {
             console.log("Atleast 3 Characters entered")
            
@@ -49,7 +48,7 @@
               if (desc[k].includes(searchterm)) {
                 console.log("found member");
                 opt.value = opt.text = desc[k];
-                searchBar.appendChild(opt);
+                memberList.appendChild(opt);
               }
             }
           }
