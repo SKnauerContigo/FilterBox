@@ -78,44 +78,6 @@
 
         loadingOverlad.style.display = "block";
 
-        async function fillMemberList()  {
-          const dataBinding = this.dataBindings.getDataBinding('exportDataSource');
-            var ds2 = await this.dataBindings.getDataBinding().getDataSource().getMembers('MDBELNR');
-            console.log(ds2);
-
-            var dimensions =  await this.dataBindings.getDataBinding().getDataSource().getDimensions();
-            var dimensions_feed =  await this.dataBindings.getDataBinding().getDimensions("dimensions");
-            var filteredDimensions = dimensions.filter((dimension) => {
-                return dimensions_feed.includes(dimension.id);
-              });
-            // var members = ArrayUtils.create(Type.MemberInfo);
-            // var value = InputField_1.getValue();
-            
-            var temp = '';
-            var members;
-
-            for (var i = 0; i < filteredDimensions.length; i++) {
-                members =  await this.dataBindings.getDataBinding().getDataSource().getMembers(filteredDimensions[i], {limit: 1000000});
-                for (var j = 0; j < members.length; j++) {
-                    temp = filteredDimensions[i].id + ":" + members[j].id;
-                    ids.push(temp);
-                    temp = filteredDimensions[i].description + ":" + members[j].description;
-                    desc.push(temp);
-                    
-                }
-            }
-            console.log("IDS");
-            console.log(ids);
-            console.log("DESCRIPTION");
-            console.log(desc);
-            console.log("done");
-            loadingOverlad.style.display = "none";
-        }
-
-        fillMemberList();
-
-        loadingOverlad.style.display = "none";
-
         searchBar.addEventListener('keyup', function(e) {
           var searchterm = searchBar.value;
           console.log(searchterm)
