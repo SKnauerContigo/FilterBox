@@ -6,9 +6,11 @@
     <button id="filter_button">Filter</button>
     <div class="child" >
     <label for="select_box_filter">Filter:</label>
+    <form action="#">
           <input id='search' type="text" name="search" list="select_box_filter/>
           <select id="select_box_filter">
           </select>
+    </form>
           
     <button id="close_button">Close</button>
     </div>
