@@ -38,7 +38,7 @@
     <div id="loading_overlay">
       <div id="loading_spinner">Loading...</div>
     </div>
-^
+
 
     `;
   
@@ -57,6 +57,7 @@
         const filterButton = shadowRoot.getElementById('filter_button');
         const searchBar = shadowRoot.getElementById('search');
         const memberList = shadowRoot.getElementById('select_box_filter');
+        var loadingOverlad = shadowRoot.getElementById('loading_overlay');
         var ids = [];
         var desc = [];
 
@@ -92,6 +93,7 @@
             // } else {
             //     childDiv.style.display = 'none';
             // }
+            loadingOverlad.style.display = "block";
 
             const dataBinding = this.dataBindings.getDataBinding('exportDataSource');
             var ds2 = await this.dataBindings.getDataBinding().getDataSource().getMembers('MDBELNR');
@@ -123,6 +125,7 @@
             console.log("DESCRIPTION");
             console.log(desc);
             console.log("done");
+            loadingOverlad.style.display = "none";
 
         
           }
