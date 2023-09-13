@@ -6,39 +6,37 @@
     <style>
 
 
-      #loading_overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: none;
-        z-index: 9999;
-        allign-items: center;
-        justify-content: center;
-      }
+    #loading_overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 9999;
+      allign-items: center;
+      justify-content: center;
+    }
 
-      .loader {
-       
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: 4px solid #f3f3f3;
-        border-top: 4px
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        animation: spin 2s linear infinite;
-      }
-
-      @keyframes spin {
-        0% { transform: translate(-50%, -50%) rotate(0deg);}
-        100% { transform: translate(-50%, -50%) rotate(360deg);}
-      }
-
+    #loading_spinner {
      
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 4px solid #f3f3f3;
+      border-top: 4px
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg);}
+      100% { transform: translate(-50%, -50%) rotate(360deg);}
+    }
 
     </style>
  
@@ -53,7 +51,7 @@
     </div>
 
     <div id="loading_overlay">
-        <div id="loading_spinner" class="loader"></div>
+        <div id="loading_spinner"></div>
     </div>
 
 
