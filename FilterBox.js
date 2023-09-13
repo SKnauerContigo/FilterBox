@@ -38,7 +38,7 @@
           var searchterm = searchBar.value;
           console.log(searchterm)
 
-          if (memberList.hasChildNodes) {
+          if (memberList !== null) {
             while (memberList.firstChild) {
               memberList.removeChild(memberList.lastChild);
             }
