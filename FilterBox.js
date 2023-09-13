@@ -5,6 +5,19 @@
 
     <style>
 
+    .loader {
+      position: relative;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 70px;
+      height: 70px;
+      left:50%;
+      top:50%;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+
       #loading_overlay {
         position: fixed;
         top: 0;
@@ -44,7 +57,7 @@
     </div>
 
     <div id="loading_overlay">
-      <div id="loading_spinner">
+      <div class="loader" id="loading_spinner">
         <div id="loading_text">Loading...</div>
       </div>
     </div>
