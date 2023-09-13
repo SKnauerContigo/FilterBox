@@ -38,11 +38,14 @@
           var searchterm = searchBar.value;
           console.log(searchterm)
 
-          if (searchterm.length >= 3) {
-            console.log("Atleast 3 Characters entered")
+          if (memberList.hasChildNodes) {
             while (memberList.firstChild) {
               memberList.removeChild(memberList.lastChild);
             }
+          }
+          if (searchterm.length >= 3) {
+            console.log("Atleast 3 Characters entered")
+           
             for (var k = 0; k < desc.length; k++) {
               if (desc[k].includes(searchterm)) {
                 console.log("found member");
