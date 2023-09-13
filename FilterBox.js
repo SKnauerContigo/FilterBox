@@ -19,7 +19,7 @@
         justify-content: center;
       }
 
-      #loading_spinner {
+      .loader {
        
         position: absolute;
         top: 50%;
@@ -53,7 +53,7 @@
     </div>
 
     <div id="loading_overlay">
-        <div id="loading_spinner"></div>
+        <div id="loading_spinner" class="loader"></div>
     </div>
 
 
