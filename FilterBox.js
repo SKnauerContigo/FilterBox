@@ -6,7 +6,7 @@
     <button id="filter_button">Filter</button>
     <div class="child" >
     <label for="select_box_filter">Filter:</label>
-          <input id='search' type="text" name="search" list="select_box_filter autocomplete="off"">
+          <input id='search' type="text" name="search" list="select_box_filter>
           <datalist id="select_box_filter">
           </datalist>
           
