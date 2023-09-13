@@ -27,7 +27,7 @@
         let shadowRoot = this.attachShadow({ mode: 'open' });
         shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
-        var opt = shadowRoot.createElement("option");
+        var opt = document.createElement("option");
         const filterButton = shadowRoot.getElementById('filter_button');
         const searchBar = shadowRoot.getElementById('search');
         const memberList = shadowRoot.getElementById('select_box_filter');
