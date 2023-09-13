@@ -75,7 +75,6 @@
         var loadingOverlad = shadowRoot.getElementById('loading_overlay');
         var ids = [];
         var desc = [];
-        loadingOverlad.style.display = "block";
 
         searchBar.addEventListener('keyup', function(e) {
           var searchterm = searchBar.value;
