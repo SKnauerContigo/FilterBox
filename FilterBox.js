@@ -5,7 +5,7 @@
 
     <style>
 
-      .loading_overlay {
+      #loading_overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -16,7 +16,7 @@
         z-index: 9999;
       }
 
-      .loading_spinner {
+      #loading_spinner {
         position: absolute
         top: 50%;
         left: 50%
