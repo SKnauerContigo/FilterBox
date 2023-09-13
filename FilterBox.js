@@ -47,7 +47,7 @@
               if (desc[k].includes(searchterm)) {
                 console.log("found member");
                 opt.value = opt.text = desc[k];
-                memberList.appendChild(opt);
+                memberList.shadowRoot.appendChild(opt);
               }
             }
           }
