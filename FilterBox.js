@@ -15,13 +15,9 @@
         background: rgba(0, 0, 0, 0.5);
         display: none;
         z-index: 9999;
-      }
-
-      #loading_spinner_container {
-        position: absolute
-        top: 50%;
-        left: 50%
-        transform: translate(-50%, -50%);
+        display: flex;
+        allign-items: center;
+        justify-content: center;
       }
 
       #loading_spinner {
@@ -54,9 +50,7 @@
     </div>
 
     <div id="loading_overlay">
-      <div id="loading_spinner_container">
         <div id="loading_spinner"></div>
-      </div>
     </div>
 
 
