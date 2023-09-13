@@ -7,8 +7,8 @@
     <div class="child" >
     <label for="select_box_filter">Filter:</label>
           <input id="search" type="text" name="search" list="select_box_filter"/>
-          <select id="select_box_filter">
-          </select>          
+          <datalist id="select_box_filter">
+          </datalist>          
     <button id="close_button">Close</button>
     </div>
 
