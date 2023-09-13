@@ -5,18 +5,6 @@
 
     <style>
 
-    .loader {
-      position: relative;
-      border: 16px solid #f3f3f3;
-      border-radius: 50%;
-      border-top: 16px solid #3498db;
-      width: 70px;
-      height: 70px;
-      left:50%;
-      top:50%;
-      -webkit-animation: spin 2s linear infinite; /* Safari */
-      animation: spin 2s linear infinite;
-    }
 
       #loading_overlay {
         position: fixed;
@@ -34,15 +22,20 @@
         top: 50%;
         left: 50%
         transform: translate(-50%, -50%);
+        border: 4px solid #f3f3f3;
+        border-top: 4px
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 2s linear infinite;
       }
 
-      #loading_text {
-        text-align: center;
-        margin-top: 1em;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
+      @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg);}
+        100% { transform: translate(-50%, -50%) rotate(360deg);}
       }
+
+     
 
     </style>
  
@@ -58,7 +51,6 @@
 
     <div id="loading_overlay">
       <div class="loader" id="loading_spinner">
-        <div id="loading_text">Loading...</div>
       </div>
     </div>
 
