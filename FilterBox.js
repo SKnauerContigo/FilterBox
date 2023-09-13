@@ -47,7 +47,7 @@
             for (var k = 0; k < desc.length; k++) {
               if (desc[k].includes(searchterm)) {
                 console.log("found member");
-                const copy = opt.content.cloneNode(true);
+                const copy = opt.cloneNode(true);
                 copy.value = copy.text = desc[k];
                 memberList.appendChild(copy);
               }
