@@ -39,7 +39,7 @@
           if (searchterm.length >= 3) {
             console.log("Atleast 3 Characters entered")
             while (memberList.firstChild) {
-              removeChild(memberList.lastChild);
+              memberList.removeChild(memberList.lastChild);
             }
             for (var k = 0; k < desc.length; k++) {
               if (desc[k].includes(searchterm)) {
