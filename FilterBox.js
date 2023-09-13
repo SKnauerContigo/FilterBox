@@ -6,7 +6,7 @@
     <button id="filter_button">Filter</button>
     <div class="child" >
     <label for="select_box_filter">Filter:</label>
-          <input type="text" name="searchterm" list="select_box_filter">
+          <input id='search' type="text" name="search" list="select_box_filter">
           <datalist id="select_box_filter">
           </datalist>
           
@@ -28,6 +28,17 @@
         shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
         const filterButton = shadowRoot.getElementById('filter_button');
+        const searchBar = shadowRoot.getElementById('search');
+
+        searchBar.addEventListener('keyup', function(e) {
+          var searchterm = searchBar.value;
+          console.log(searchterm)
+
+          if (searchterm.length >= 3) {
+            console.log("Atleast 3 Characters entered")
+          }
+
+        });
 
         // Add a click event listener to the "filter_button"
         filterButton.addEventListener('click', async () => {
@@ -70,10 +81,11 @@
             console.log(desc);
             console.log("done");
 
+        
+          }
 
 
-        });
-
+        );
       }
   
       fireChanged() {
