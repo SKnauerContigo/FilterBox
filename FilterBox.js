@@ -22,6 +22,10 @@
 
       #loading_spinner {
        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         border: 4px solid #f3f3f3;
         border-top: 4px
         border-radius: 50%;
