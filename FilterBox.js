@@ -27,8 +27,10 @@
         let shadowRoot = this.attachShadow({ mode: 'open' });
         shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
+        var opt = shadowRoot.createElement("option");
         const filterButton = shadowRoot.getElementById('filter_button');
         const searchBar = shadowRoot.getElementById('search');
+        const memberList = shadowRoot.getElementById('select_box_filter');
 
         searchBar.addEventListener('keyup', function(e) {
           var searchterm = searchBar.value;
@@ -36,6 +38,15 @@
 
           if (searchterm.length >= 3) {
             console.log("Atleast 3 Characters entered")
+            while (memberList.firstChild) {
+              removeChild(memberList.lastChild);
+            }
+            for (var k = 0; k < desc.length; k++) {
+              if (desc[k].includes(searchterm)) {
+                opt.value = opt.text = desc[k];
+                memberList.appendChild(opt);
+              }
+            }
           }
 
         });
