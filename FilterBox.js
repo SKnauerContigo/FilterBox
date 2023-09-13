@@ -8,6 +8,7 @@
     <label for="select_box_filter">Filter:</label>
           <input id='search' type="text" name="search" list="select_box_filter/>
           <select id="select_box_filter">
+            <option></option>
           </select>
           
     <button id="close_button">Close</button>
